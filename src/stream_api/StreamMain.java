@@ -11,17 +11,17 @@ public class StreamMain {
 
         // create a list and print even number
 
-        List<Integer> list1 = List.of(1, 4, 5, 7, 8, 7, 9);
+        List<Integer> list1 = List.of(1, 4, 5, 7, 8, 7, 9,11,12);
 
-        List<Integer> list2 = new ArrayList<>();
-        list2.add(20);
-        list2.add(2);
-        list2.add(3);
-        list2.add(23);
-        list2.add(4);
-        list2.add(5);
-
-        List<Integer> list3 = Arrays.asList(20,22,11,21,12,1,5,14);
+//        List<Integer> list2 = new ArrayList<>();
+//        list2.add(20);
+//        list2.add(2);
+//        list2.add(3);
+//        list2.add(23);
+//        list2.add(4);
+//        list2.add(5);
+//
+//        List<Integer> list3 = Arrays.asList(20,22,11,21,12,1,5,14);
 
         /// list1
         /// print without strem
@@ -39,11 +39,15 @@ public class StreamMain {
         System.out.println(oddList);
         System.out.println("");
 
-        // using stream api
+        // using stream api get even number
         List<Integer> collect = list1.stream().filter(r -> r % 2 == 0).collect(Collectors.toList());
         List<Integer> collect1 = list1.stream().filter(r -> r % 2 != 0).collect(Collectors.toList());
         System.out.println(collect);
         System.out.println(collect1);
+
+        // get number grater than 10;
+        List<Integer> collect2 = list1.stream().filter(i -> (i > 10)).collect(Collectors.toList());
+        System.out.println(collect2);
 
     }
 }
